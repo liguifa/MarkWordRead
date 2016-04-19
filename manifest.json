@@ -1,0 +1,27 @@
+{
+	"name":"划词阅读",
+	"version":"1.0.0",
+	"manifest_version": 2,  
+	"description":"划词阅读，使你能在任何页面语音阅读.",
+	"browser_action": 
+	{  
+    	"default_icon": "res/start.png" ,
+    	"default_title": "划词阅读",
+        "default_popup": "views/popup.html"
+    },
+    "icons":
+    {
+        "16": "res/logo_16.png",             
+        "48": "res/logo_48.png",            
+        "128": "res/logo_128.png"   
+    },
+	"content_scripts": 
+	[{
+    	"matches": ["http://*/*","https://*/*"],
+    	"js": ["script/jquery.min.js","script/script.js"]
+    }],
+    "permissions": 
+    [
+        "storage"
+    ]
+}
